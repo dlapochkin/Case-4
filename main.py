@@ -14,8 +14,8 @@ if ord(text[0])<122:
 else:
     syllables = sum(1 for x in text if x in 'уеоаыяиюэ')
 print('Слогов:',syllables)
-
-
+print('Средняя длина предложения в словах:',text.count(' ')+1/sentence)
+print('Средняя длина слова в слогах:',syllables/text.count(' ')+1)
 
 
 
