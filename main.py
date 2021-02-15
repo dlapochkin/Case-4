@@ -1,4 +1,3 @@
-from textblob import classifiers
-training = input()
-classifier = classifiers.NaiveBayesClassifier(training)
-print(classifier)
+from textblob import TextBlob
+wiki = TextBlob("Python is a high-level, general-purpose programming language.")
+print(wiki)
