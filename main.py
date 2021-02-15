@@ -8,9 +8,7 @@ for b in['.','!','?']:
         sentence += text.count(b)
 print('Предложений:', sentence)
 
-import re
-word = len(re.findall(r'\w+', text))
-print('Слов:', word)
+print('Слов:',text.count(' ')+1 )
 
 if ord(text[0])<122:
     syllables=sum(1 for x in text if x in 'aeiou')
@@ -18,9 +16,6 @@ else:
     syllables = sum(1 for x in text if x in 'уеоаыяиюэ')
 print('Слогов:',syllables)
 
-words = re.split('\w', text)
-asl = sum(len(word) for word in words) / len(words)
-print('Средняя длина слова в слогах:', asl, words)
 
 
 
