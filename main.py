@@ -1,4 +1,4 @@
-import textblob
+from textblob import TextBlob
 
 text = input()
 syllables = 0
