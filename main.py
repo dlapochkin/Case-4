@@ -2,7 +2,7 @@ from textblob import TextBlob
 text = input()
 blob = TextBlob(text)
 if blob.detect_language() == 'ru':
-    blob.translate(to="en")
+    blob = blob.translate(to="en")
 if blob.sentiment.polarity > 0.33:
     tonality = 'Положительная'
 elif blob.sentiment.polarity < -0.33:
