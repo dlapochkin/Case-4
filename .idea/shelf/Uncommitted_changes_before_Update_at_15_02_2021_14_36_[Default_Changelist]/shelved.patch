@@ -1,0 +1,18 @@
+Index: main.py
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>text = input()\r\nsyllables=0\r\nsentence=0\r\n\r\nfor b in['.','!','?']:\r\n    if text.count(b)>0:\r\n        sentence += text.count(b)\r\nprint('Предложений:', sentence)\r\n\r\nprint('Слов:',text.count(' ')+1 )\r\n\r\nif ord(text[0])<122:\r\n    syllables=sum(1 for x in text.lower() if x in 'aeiou')\r\nelse:\r\n    syllables = sum(1 for x in text.lower() if x in 'уеоаыяиюэ')\r\nprint('Слогов:',syllables)\r\nprint('Средняя длина предложения в словах:',text.count(' ')+1/sentence)\r\nprint('Средняя длина слова в слогах:',syllables/text.count(' ')+1)\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/main.py b/main.py
+--- a/main.py	(revision 2c1d434edf6162166a49e929f6657bf30e0ea5df)
++++ b/main.py	(date 1613374150370)
+@@ -14,5 +14,5 @@
+ else:
+     syllables = sum(1 for x in text.lower() if x in 'уеоаыяиюэ')
+ print('Слогов:',syllables)
+-print('Средняя длина предложения в словах:',text.count(' ')+1/sentence)
+-print('Средняя длина слова в слогах:',syllables/text.count(' ')+1)
++print('Средняя длина предложения в словах:',(text.count(' ')+1)/sentence)
++print('Средняя длина слова в слогах:',syllables/(text.count(' ')+1))
