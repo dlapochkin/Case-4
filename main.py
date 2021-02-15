@@ -1,7 +1,6 @@
 text = input()
 syllables=0
 sentence=0
-asl=0
 
 for b in['.','!','?']:
     if text.count(b)>0:
